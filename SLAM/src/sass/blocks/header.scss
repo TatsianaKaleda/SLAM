@@ -1,0 +1,17 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    padding: 2.5rem 0;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: darken(#fff, 5%);
+    font-weight: 800;
+    font-size: 4rem;
+
+    background-color: #212121;
+}

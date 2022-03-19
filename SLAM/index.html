@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        Header
+    </div>
+
+    <!-- Sections -->
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <div class="intro">
+                    Intro qqq
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        Footer
+    </footer>
+
+
+    <!-- <a class="link__modal" href="#" data-toggle="modal" data-target="#modal-order">Link Modal</a> -->
+
+
+    <!-- Sprites -->
+    <svg style="display: none;">
+        <symbol id="close" viewbox="0 0 329.26933 329">
+            <g>
+                <path
+                    d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0" />
+            </g>
+        </symbol>
+
+        <symbol id="arrow" viewbox="0 0 284.935 284.936">
+            <g>
+                <path
+                    d="M222.701,135.9L89.652,2.857C87.748,0.955,85.557,0,83.084,0c-2.474,0-4.664,0.955-6.567,2.857L62.244,17.133
+                                    c-1.906,1.903-2.855,4.089-2.855,6.567c0,2.478,0.949,4.664,2.855,6.567l112.204,112.204L62.244,254.677
+                                    c-1.906,1.903-2.855,4.093-2.855,6.564c0,2.477,0.949,4.667,2.855,6.57l14.274,14.271c1.903,1.905,4.093,2.854,6.567,2.854
+                                    c2.473,0,4.663-0.951,6.567-2.854l133.042-133.044c1.902-1.902,2.854-4.093,2.854-6.567S224.603,137.807,222.701,135.9z" />
+            </g>
+        </symbol>
+    </svg>
+
+    <!-- Modal Order -->
+    <div class="modalOrder  modal  fade" id="modal-order" tabindex="-1" aria-hidden="false">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content  modalOrder__content">
+                <button class="modalOrder__btn-close  close" data-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modalOrder__inner">
+                    <div class="modalOrder__header">
+                        <h2 class="modalOrder__title">
+                            Оставьте ваш номер телефона
+                        </h2>
+
+                        <h3 class="modalOrder__subtitle">
+                            И наш консультант с Вами свяжется
+                        </h3>
+
+                        <div class="modalOrder__links">
+                            <a class="modalOrder__item" href="tel:+375000000000">
+                                <div class="modalOrder__item-image">
+                                    <img src="../common/img/logo_A1_56.png" alt="">
+                                </div>
+
+                                <div class="modalOrder__item-number">
+                                    +375 (00) 000-00-00
+                                </div>
+                            </a>
+
+                            <a class="modalOrder__item" href="tel:+375000000000">
+                                <div class="modalOrder__item-image">
+                                    <img src="../common/img/logo_mts_64.jpg" alt="">
+                                </div>
+
+                                <div class="modalOrder__item-number">
+                                    +375 (00) 000-00-00
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="modalOrder__body">
+                        <form class="modalOrder__form">
+
+                            <!-- name -->
+                            <input class="modalOrder__input" type="text" name="name" placeholder="Ваше имя" required>
+
+                            <!-- number -->
+                            <input class="modalOrder__input" type="text" name="tel" placeholder="Номер телефона"
+                                required>
+
+                            <button class="modalOrder__btn" type="submit">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Leave -->
+    <div class="modalLeave  modal  fade" id="modal-leave" tabindex="-1" aria-hidden="false">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content  modalLeave__content">
+                <button class="modalLeave__btn-close  close" data-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modalLeave__inner">
+                    <div class="modalLeave__header">
+                        <h2 class="modalLeave__title">
+                            Оставьте ваш номер телефона
+                        </h2>
+
+                        <h3 class="modalLeave__subtitle">
+                            И наш консультант с Вами свяжется
+                        </h3>
+
+                        <div class="modalLeave__links">
+                            <a class="modalLeave__item" href="tel:+375000000000">
+                                <div class="modalLeave__item-image">
+                                    <img src="../common/img/logo_A1_56.png" alt="">
+                                </div>
+
+                                <div class="modalLeave__item-number">
+                                    +375 (00) 000-00-00
+                                </div>
+                            </a>
+
+                            <a class="modalLeave__item" href="tel:+375000000000">
+                                <div class="modalLeave__item-image">
+                                    <img src="../common/img/logo_mts_64.jpg" alt="">
+                                </div>
+
+                                <div class="modalLeave__item-number">
+                                    +375 (00) 000-00-00
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="modalLeave__body">
+                        <form class="modalLeave__form">
+
+                            <!-- name -->
+                            <input class="modalLeave__input" type="text" name="name" placeholder="Ваше имя" required>
+
+                            <!-- number -->
+                            <input class="modalLeave__input" type="text" name="tel" placeholder="Номер телефона"
+                                required>
+
+                            <button class="modalLeave__btn" type="submit">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Comment -->
+    <div class="modalComment  modal  fade" id="modal-comment" tabindex="-1" aria-hidden="false">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content  modalComment__content">
+                <button class="modalComment__btn-close  close" data-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+
+                <div class="modalComment__inner">
+                    <div class="modalComment__header">
+                        <h3 class="modalComment__title">
+                            Оставьте ваш комментарий
+                        </h3>
+                    </div> <!-- ./modal__header -->
+
+                    <div class="modalComment__body">
+                        <form class="modalComment__form" method="post" enctype="multipart/form-data">
+
+                            <input class="modalComment__input" type="text" name="name" placeholder="Ваше имя" required>
+
+                            <input class="modalComment__input" type="text" name="tel" placeholder="Номер телефона"
+                                required>
+
+                            <textarea class="modalComment__textarea" name="comment-text" placeholder="Ваш комментарий"
+                                required></textarea>
+
+                            <div class="modalComment__rating">
+                                <input disabled checked
+                                    class="modalComment__rating-input modalComment__rating-input--none" name="rating"
+                                    id="rating3-none" value="0" type="radio">
+
+                                <label class="modalComment__rating-label" for="rating-1">
+                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
+                                </label>
+                                <input class="modalComment__rating-input" name="rating" id="rating-1" value="1"
+                                    type="radio">
+
+                                <label class="modalComment__rating-label" for="rating-2">
+                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
+                                </label>
+                                <input class="modalComment__rating-input" name="rating" id="rating-2" value="2"
+                                    type="radio">
+
+                                <label class="modalComment__rating-label" for="rating-3">
+                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
+                                </label>
+                                <input class="modalComment__rating-input" name="rating" id="rating-3" value="3"
+                                    type="radio">
+
+                                <label class="modalComment__rating-label" for="rating-4">
+                                    <i class="rating__icon modalComment__rating-icon--star fa fa-star"></i>
+                                </label>
+                                <input class="modalComment__rating-input" name="rating" id="rating-4" value="4"
+                                    type="radio">
+
+                                <label class="modalComment__rating-label" for="rating-5">
+                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
+                                </label>
+                                <input class="modalComment__rating-input" name="rating" id="rating-5" value="5"
+                                    type="radio">
+                            </div>
+
+                            <label class="modalComment__file">
+                                <i class="far fa-file-image"></i>
+                                Фото
+                                <input name="photo" type="file">
+                            </label>
+
+                            <!-- button -->
+                            <button class="modalComment__btn" type="submit">
+                                Отправить отзыв
+                            </button>
+                        </form> <!-- ./modal__form -->
+                    </div> <!-- ./modal__body -->
+                </div> <!-- modal__inner -->
+            </div>
+        </div> <!-- ./modal-dialog  -->
+    </div> <!-- ./modal -->
+
+
+    <!-- Scripts -->
+    <script src="./public/data/data.js"></script>
+    <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>

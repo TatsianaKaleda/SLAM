@@ -1,0 +1,30 @@
+$white: #fff;
+$black: #333;
+$green: #319511;
+$orange: #f27200;
+$yellow: #ffc413;
+$purple: #9f24a3;
+$pink: #f0c8d1;
+$red: #d73141;
+
+$grey-dark: #2e2e2e;
+$white-dark: darken(#fff, 10%);
+
+$green-gradient: linear-gradient($green, darken($green, 10%));
+$radius-sm: 0.5rem;
+
+/* Modals */
+$modal-background: $white-dark;
+$modal-latent: rgba(#000, 0.7);
+$modal-shadow: 0 0 3.5rem darken(#fff, 40%);
+$modal-shadow-pulse: 0 0 5.5rem darken(#fff, 30%);
+
+$modal-color-title: #111;
+$modal-color-subtitle: #333;
+$modal-color-text: #222;
+
+$modal-color-white: #fff;
+$modal-color-green: $red;
+$modal-color-green-dark: $red;
+
+$modal-sm-width: 575px;
