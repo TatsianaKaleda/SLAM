@@ -1,12 +1,90 @@
 .footer {
-    padding: 2.5rem 0;
-
+    margin: 0 auto;
+    padding: 5.4rem 0 3.4rem;
+    max-width: 160rem;
     text-align: center;
-    text-transform: uppercase;
-    color: darken(#fff, 5%);
-    font-weight: 800;
-    font-size: 4rem;
+    background-color: #894083;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    color: #fff;
 
-    background-color: #212121;
+    &-nav {
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
 
+        & .footer-list {
+            padding: 0 1rem;
+
+            & .item-title {
+                margin-bottom: 2rem;
+
+                &-link {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        color: lightgrey;
+                        transition: width 0.3s ease-out;
+                    }
+                }
+                
+            }
+
+            & .item-detail {
+                margin-bottom: 1.3rem;
+
+                &-link {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        color: lightgrey;
+                        transition: width 0.3s ease-out;
+                    }
+                }
+
+                & img {
+                    margin-right: 1.5rem;
+                }
+
+                & span {
+                    &:hover{
+                        color: lightgrey;
+                        transition: width 0.3s ease-out;
+                    }
+                }
+            }
+
+            & .for-icon {
+                display: flex;
+
+                & .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    background: rgba(255, 255, 255, 0.15);  
+                    
+                    &:hover {
+                        background: rgba(0, 206, 119, 0.15);  
+                    }
+    
+
+                    & .icon-img {
+                        margin-right: 0;
+                    }
+                }
+
+                & .facebook {
+                    margin-right: 0.9rem;
+                }
+            }
+        }
+    }
 }

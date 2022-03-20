@@ -5,13 +5,233 @@
     right: 0;
     z-index: 1000;
 
-    padding: 2.5rem 0;
-
+    max-width: 160rem;
+    margin: 0 auto;
     text-align: center;
-    text-transform: uppercase;
-    color: darken(#fff, 5%);
-    font-weight: 800;
-    font-size: 4rem;
+    background-color: #FFFFFF;
+    
+    font-size: 1.5rem;
 
-    background-color: #212121;
+    & .navbar {
+        padding: 0;
+
+        & .container-fluid {
+            height: 4rem;
+            background-color: #894083;
+            border-radius: 0 0 2rem 2rem;
+    
+            & .collapse {
+                & .navbar-nav {
+                    & .nav-item {
+                        margin: 0 2.4rem;
+                        padding-bottom: 1px;
+        
+                        & .nav-link {
+                            color: #fff;
+                            font-family: "HeliosCRegular";
+                            font-weight: 400;
+                            letter-spacing: 0.02em;
+
+                            &:hover {
+                                color: lightgrey;
+                                transition: width 0.3s ease-out;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            & .menu-info {
+                flex-basis: min-content;
+
+                & .nav-item {   
+                padding-bottom: 0.1rem;
+
+                    & .nav-link {
+                        margin-right: 5rem;
+                        padding: 0;
+                        color: #fff;  
+                        font-family: "HeliosCRegular";
+                        font-weight: 400;
+                        letter-spacing: 0.02em;
+
+                        &:hover {
+                            border-bottom: 1px dashed #fff;
+                            transition: width 0.3s ease-out;
+                        }
+                    
+                        & .img {
+                            margin-right: 1.8rem;
+                        }
+
+                        & .textInfo {
+                            vertical-align: middle;
+                        }
+                        
+                    }
+
+                    & .email {
+                        font-family: "Roboto";
+                        font-weight: 400;
+                        letter-spacing: 0.02em;
+                    }
+
+                    & .tel,
+                    & .call,
+                    & .enter {
+
+                        & .img {
+                            margin-right: 0.8rem;
+                        }
+                    }
+
+                    & .enter {
+                        margin-right: 0;
+
+                        &:hover {
+                            border-bottom: none;
+                            color: lightgrey;
+                        }
+                    }
+                    
+                }
+            }
+
+        }
+    } 
+    
+    & .header-list {
+        padding: 1.6rem 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Montserrat";
+        font-weight: 400;
+        
+
+        &-item {
+            transition: 1s;
+
+            & .header-text {
+                color: #828282;
+                text-align: center;
+                font-size: 1.4rem;
+            }
+
+            & .search {
+                position: relative;
+                width: 76rem;
+                margin: 0 auto;
+                background-color: #F4F4F4;
+                border-radius: 50rem;
+
+                & .search {
+                    border: none;
+                    height: 2.6rem;
+                    width: 2.6rem;
+                    position: absolute;
+                    top: 1.3rem;
+                    left: 1.7rem;
+                    bottom: 1.2rem;
+                    cursor: pointer;
+                }
+                & .cleanButton {
+                    border: none;
+                    position: absolute;
+                    top: 25%;
+                    right: 0;
+                    cursor: pointer;
+
+                    & img {
+                        width: 1.7rem;
+                    }
+                }
+
+                input, button {
+                    outline: none;
+                    background: transparent;
+                }
+
+                input {
+                    width: 100%;
+                    height: 5.2rem;
+                    padding-left: 6.9rem;
+                    border: none;
+                }
+
+                input:focus {
+                    border-color: #828282;
+                    border-radius: 5rem;
+                }
+            }
+
+            & img {
+                margin-right: 1.7rem;
+            }
+
+            &:hover {
+                & .header-logo {
+                    & img {
+                      transform: scale(0.9);  
+                    } 
+                }
+                & .liked {
+                    transform: scale(0.9);
+                    color: #00CE77;
+
+                    & img {
+                        transform: scale(0.9); 
+                    }
+                }
+                & .backed {
+                    & .backed-img,
+                    & .backed-count {
+                        transform: scale(0.9);
+                    }
+                }
+                & .backed-price {
+                    transform: scale(0.9);
+                    color: rgb(0, 206, 119);
+                }
+            }
+        }
+
+        & .for-backed {
+            display: flex;
+
+            & .backed {
+                position: relative;
+                margin-right: 1.7rem;
+                width: 2.9rem;
+                height: 3.1rem;
+
+                &-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin-right: 0;
+                }
+                &-count {
+                    position: absolute;
+                    top: calc(24% - 15px/2);
+                    right: calc(19% - 21px/2);
+
+                    font-family: "Acrom";
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    color: #FFFFFF;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                    width: 2.1rem;
+                    height: 1.5rem;   
+                            
+                    background: #894083; 
+                } 
+            }
+        }
+    }
 }

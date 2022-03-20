@@ -21,9 +21,9 @@ html {
 }
 
 body {
-    background-color: darken(#fff, 10%);
+    // background-color: darken(#fff, 10%);
 
-    color: #2e2e2e;
+    // color: #2e2e2e;
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
@@ -44,4 +44,17 @@ h6 {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    margin-bottom: 0;
+}
+a {
+    text-decoration: none;
+    color: #404040;
+
 }
