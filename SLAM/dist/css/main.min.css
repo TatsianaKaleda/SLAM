@@ -11585,12 +11585,8 @@ a {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 123rem;
-  padding: 0 1.5rem;
-}
-
-.section {
-  background-color: #000;
+  max-width: 160rem;
+  margin: 0 auto;
 }
 
 .slick-slider {
@@ -12355,8 +12351,6 @@ a {
   left: 0;
   right: 0;
   z-index: 1000;
-  max-width: 160rem;
-  margin: 0 auto;
   text-align: center;
   background-color: #FFFFFF;
   font-size: 1.5rem;
@@ -12390,7 +12384,7 @@ a {
   padding-bottom: 0.1rem;
 }
 .header .navbar .container-fluid .menu-info .nav-item .nav-link, .header .navbar .container-sm .menu-info .nav-item .nav-link, .header .navbar .container-md .menu-info .nav-item .nav-link, .header .navbar .container-lg .menu-info .nav-item .nav-link, .header .navbar .container-xl .menu-info .nav-item .nav-link, .header .navbar .container-xxl .menu-info .nav-item .nav-link {
-  margin-right: 5rem;
+  margin-right: 4rem;
   padding: 0;
   color: #fff;
   font-family: "HeliosCRegular";
@@ -12533,6 +12527,7 @@ a {
 }
 
 .main {
+  margin: 0 auto;
   padding-top: 10rem;
   width: 100%;
   overflow: hidden;
@@ -12540,20 +12535,271 @@ a {
   max-width: 160rem;
 }
 
-.intro {
-  padding: 10rem 0;
+.intro .lazy {
+  position: relative;
+  margin: 0px auto;
+  width: 160rem;
+  height: 80rem;
+}
+.intro .lazy-img {
+  width: 100%;
+  height: 80rem;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 22;
+}
+.intro .lazy-img img {
+  display: block;
+}
+
+.next {
+  width: 5.6rem;
+  height: 4.3rem;
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.promo {
+  margin-top: 5.9rem;
+  margin-bottom: 4.5rem;
+  height: 77rem;
+}
+.promo h2, .promo .h2 {
+  margin-bottom: 7.7rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 22px;
+  color: #894083;
+}
+.promo-slider-card {
+  width: 30.9rem;
+  padding-bottom: 1rem;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 22px 0px;
+  box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+.promo-slider-card:hover .promo-slider-card-footer {
+  display: block;
+}
+.promo-slider-card-header {
+  position: relative;
+}
+.promo-slider-card-header .card-label {
+  position: absolute;
+  left: 1rem;
+  right: 0;
+  top: 1rem;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "HeliosCRegular";
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #FFFFFF;
+}
+.promo-slider-card-header .card-label .sale {
+  width: 9.1rem;
+  height: 2rem;
+  padding: 0.3rem 1rem 0.1rem;
+  background: #FDCA33;
+  border-radius: 16px 0px;
+}
+.promo-slider-card-header .card-label .new {
+  margin-top: 0.2rem;
+  width: 7.3rem;
+  height: 2rem;
+  padding: 0.3rem 1rem 0.1rem;
+  background: #8DC63F;
+  border-radius: 16px 0px;
+}
+.promo-slider-card-header .card-label .recomend {
+  margin-top: 0.2rem;
+  width: 10.6rem;
+  height: 2rem;
+  padding: 0.3rem 1rem 0.1rem;
+  background: #00C2CE;
+  border-radius: 16px 0px;
+}
+.promo-slider-card-header .isliked {
+  position: absolute;
+  top: 1.7rem;
+  right: 1.7rem;
+}
+.promo-slider-card-header .isliked .hurt {
+  width: 2.1rem;
+  height: 1.9rem;
+}
+.promo-slider-card-header .isliked .hurt:hover .hurt {
+  display: none;
+}
+.promo-slider-card-header .isliked .hurt_active {
+  display: none;
+}
+.promo-slider-card-header .isliked .hurt_active:hover .hurt_active {
+  display: inline;
+}
+.promo-slider-card-header .isliked:hover .hurt {
+  display: none;
+}
+.promo-slider-card-header .isliked:hover .hurt_active {
+  display: inline;
+}
+.promo-slider-card-header .isliked.active .hurt {
+  display: none;
+}
+.promo-slider-card-header .isliked.active .hurt_active {
+  display: inline;
+}
+.promo-slider-card-header .card-img {
+  padding: 4.6rem 3.5rem 0 5.3rem;
+}
+.promo-slider-card-content {
+  margin-top: 4.7rem;
+  padding: 0 2rem;
+  font-family: "HeliosCRegular";
+  font-weight: 400;
+  line-height: 2.2rem;
+  letter-spacing: 0.02em;
+}
+.promo-slider-card-content .card-code {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.promo-slider-card-content .card-code-instock {
+  color: #894083;
+}
+.promo-slider-card-content .card-code-cod {
+  color: #828282;
+}
+.promo-slider-card-content .card-description {
+  margin-top: 1.2rem;
+  width: 26.9rem;
+  height: 8.8rem;
+  font-size: 1.5rem;
+  text-align: justify;
+  color: #4F681E;
+}
+.promo-slider-card-price {
+  display: flex;
+  margin-top: 1.7rem;
+  padding: 0 2rem;
+}
+.promo-slider-card-price .card-price {
+  display: flex;
+  align-items: end;
+}
+.promo-slider-card-price .card-price-new {
+  margin-right: 0.6rem;
+  font-family: "HeliosC";
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: #181717;
+}
+.promo-slider-card-price .card-price-old {
+  font-family: "HeliosLightC";
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.01em;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #828282;
+}
+.promo-slider-card-price .card-backed {
+  margin-left: 7rem;
+}
+.promo-slider-card-price .card-backed-cont {
+  position: relative;
+  width: 2.9rem;
+  height: 3.1rem;
+}
+.promo-slider-card-price .card-backed-cont .backed-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 0;
+}
+.promo-slider-card-price .card-backed-cont .backed-count {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-family: "Acrom";
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 2.1rem;
+  height: 1.5rem;
+  background: #894083;
+}
+.promo-slider-card-footer {
+  margin-top: 0.8rem;
+  display: none;
+  padding: 0 2rem;
+}
+.promo-slider-card-footer .card-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 268px;
+  height: 40px;
+  background: #FAFAFA;
+  border-radius: 50px;
+}
+.promo-slider-card-footer .card-count-minus, .promo-slider-card-footer .card-count-plus {
+  background: transparent;
+  border: none;
+}
+.promo-slider-card-footer .card-count .count {
+  font-family: "HeliosCRegular";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
   text-align: center;
-  text-transform: uppercase;
-  color: #f2f2f2;
-  font-weight: 800;
-  font-size: 7rem;
-  background-color: #212121;
+  letter-spacing: 0.01em;
+}
+.promo-slider-card-footer .card-buttons {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.promo-slider-card-footer .card-buttons-buy, .promo-slider-card-footer .card-buttons-add {
+  margin-bottom: 0.7rem;
+  height: 4rem;
+  padding: 1rem 1.2rem 0.6rem;
+  font-family: "HeliosCBold";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: #894083;
+  background-color: #fff;
+  border: 1px solid #894083;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+.promo-slider-card-footer .card-buttons-buy:hover, .promo-slider-card-footer .card-buttons-add:hover {
+  background-color: #894083;
+  color: #fff;
 }
 
 .footer {
-  margin: 0 auto;
+  margin-top: 4.5rem;
   padding: 5.4rem 0 3.4rem;
-  max-width: 160rem;
   text-align: center;
   background-color: #894083;
   font-family: "Roboto";

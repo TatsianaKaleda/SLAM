@@ -1,0 +1,290 @@
+.promo {
+    margin-top: 5.9rem;
+    margin-bottom: 4.5rem;
+    height: 77rem;
+    
+    & h2 {
+        margin-bottom: 7.7rem;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 22px;
+        color: #894083;
+    }
+    &-slider {
+        &-card {
+            width: 30.9rem;
+            padding-bottom: 1rem;
+            height: auto;
+            background: #FFFFFF;
+            border-radius: 22px 0px;
+            box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+
+            &:hover {
+                & .promo-slider-card-footer {
+                    display: block;
+                }
+            }
+
+            &-header {
+                position: relative;
+
+                & .card-label {
+                    position: absolute;
+                    left: 1rem;
+                    right: 0;
+                    top: 1rem;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    font-family: 'HeliosCRegular';
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    color: #FFFFFF;
+
+                    & .sale {
+                        width: 9.1rem;
+                        height: 2rem;
+                        padding: 0.3rem 1rem 0.1rem;
+
+                        background: #FDCA33;
+                        border-radius: 16px 0px;
+                    }
+                    & .new {
+                        margin-top: 0.2rem;
+                        width: 7.3rem;
+                        height: 2rem;
+                        padding: 0.3rem 1rem 0.1rem;
+
+                        background: #8DC63F;
+                        border-radius: 16px 0px;
+                    }
+                    & .recomend {
+                        margin-top: 0.2rem;
+                        width: 10.6rem;
+                        height: 2rem;
+                        padding: 0.3rem 1rem 0.1rem;
+
+                        background: #00C2CE;
+                        border-radius: 16px 0px;
+                    }
+                }
+                & .isliked {
+                    position: absolute;
+                    top: 1.7rem;
+                    right: 1.7rem;
+
+                    & .hurt {
+                        width: 2.1rem;
+                        height: 1.9rem;
+                        &:hover {
+                            & .hurt {
+                                display: none;
+                            }
+                        }
+                    }
+                    & .hurt_active {
+                        display: none;
+                        &:hover {
+                            & .hurt_active {
+                                display: inline;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        & .hurt {
+                            display: none;
+                        }
+                        & .hurt_active {
+                            display: inline;
+                        }
+                    }
+                    &.active {
+                        & .hurt {
+                            display: none;
+                        }
+                        & .hurt_active {
+                            display: inline;
+                        }
+                    }   
+
+                }
+                & .card-img {
+                    padding: 4.6rem 3.5rem 0 5.3rem;
+                }
+            }
+
+            &-content {
+                margin-top: 4.7rem;
+                padding: 0 2rem;
+                font-family: 'HeliosCRegular';
+                font-weight: 400;
+                line-height: 2.2rem;
+                letter-spacing: 0.02em;
+
+                & .card-code {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 1.4rem;
+                    
+                    &-instock {
+                        color: #894083;
+                    }
+                    &-cod {
+                        color: #828282;
+                    }
+                }
+
+                & .card-description {
+                    margin-top: 1.2rem;
+                    width: 26.9rem;
+                    height: 8.8rem;
+                    font-size: 1.5rem;
+                    text-align: justify;
+                    color: #4F681E;
+                }
+
+            }
+
+            &-price {
+                display: flex;
+                margin-top: 1.7rem;
+                padding: 0 2rem;
+
+                & .card-price {
+                    display: flex;
+                    align-items: end;
+
+                    &-new {
+                        margin-right: 0.6rem;
+                        font-family: 'HeliosC';
+                        font-weight: 700;
+                        font-size: 2.4rem;
+                        line-height: 3.6rem;
+                        
+                        color: #181717;
+                    }
+                    &-old {
+                        font-family: 'HeliosLightC';
+                        font-weight: 300;
+                        font-size: 1.8rem;
+                        line-height: 2.6rem;
+                        
+                        letter-spacing: 0.01em;
+                        text-decoration-line: line-through;
+                        
+                        color: #828282;
+                    }
+                }
+
+                & .card-backed {
+                    margin-left: 7rem;
+                    &-cont {
+                        position: relative;
+                        width: 2.9rem;
+                        height: 3.1rem;
+
+                        & .backed-img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            margin-right: 0;
+                        }
+
+                        & .backed-count {
+                            position: absolute;
+                            top: 0;
+                            left: 1rem;
+
+                            font-family: "Acrom";
+                            font-weight: 400;
+                            font-size: 1.2rem;
+                            color: #FFFFFF;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            padding: 0.5rem;
+                            width: 2.1rem;
+                            height: 1.5rem;   
+                                    
+                            background: #894083; 
+                        } 
+                    }
+                    
+                }
+            }
+
+            &-footer {
+                margin-top: 0.8rem;
+                display: none;
+                padding: 0 2rem;
+
+                & .card-count {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 268px;
+                    height: 40px;
+                    background: #FAFAFA;
+                    border-radius: 50px;
+
+                    &-minus,
+                    &-plus {
+                        background: transparent;
+                        border: none;
+                    }
+
+                    & .count {
+                        font-family: 'HeliosCRegular';
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 26px;
+                        text-align: center;
+                        letter-spacing: 0.01em;
+                    }
+                }
+
+                & .card-buttons {
+                    margin-top: 1.2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &-buy,
+                    &-add {
+                        margin-bottom: 0.7rem;
+                        height: 4rem;
+                        padding: 1rem 1.2rem 0.6rem;
+
+                        font-family: "HeliosCBold";
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        line-height: 2.2rem;
+                        text-align: center;
+                        color: #894083;
+                        background-color: #fff;
+
+                        border: 1px solid #894083;
+                        box-sizing: border-box;
+                        border-radius: 50px;
+
+                        &:hover {
+                            background-color: #894083;
+                            color: #fff;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
