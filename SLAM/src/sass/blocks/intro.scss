@@ -1,29 +1,21 @@
 .intro {
-    // padding: 10rem 0;
     & .lazy {
         position: relative;
         margin:0px auto;
-        width: 160rem;
-        height: 80rem;
+        max-width: 160rem;
 
         &-img {
-            width: 100%;
+            width: 160rem;
             height: 80rem;
             background: rgba(0, 0, 0, 0.2);
             z-index: 22;
             
             & img {
-                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
            
         }
     }
-}
-.next {
-    width: 5.6rem;
-    height: 4.3rem;
-    position: absolute;
-    top: 30%;
-    z-index: 1;
-    cursor: pointer;
 }

@@ -11618,15 +11618,18 @@ a {
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   transform: translate3d(0, 0, 0);
+  transition: width 0.5s;
 }
 
 .slick-track {
+  margin-bottom: 2rem;
   position: relative;
   left: 0;
   top: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: transform 1s;
 }
 .slick-track:before, .slick-track:after {
   content: "";
@@ -11675,10 +11678,10 @@ a {
 
 .slick-dots {
   position: absolute;
-  bottom: 3rem;
+  bottom: 4.5rem;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 0;
   padding: 0;
   margin: 0;
   display: flex;
@@ -11686,8 +11689,8 @@ a {
 }
 .slick-dots li {
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
   margin-right: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #f1f1f1;
@@ -11707,40 +11710,63 @@ a {
   box-shadow: inset 0 0 1rem #999;
 }
 .slick-dots li button {
+  border-radius: 50%;
   border: 0;
   width: 100%;
   height: 100%;
-  color: transparent;
-  background-color: transparent;
+  background-color: #BDBDBD;
 }
 .slick-dots li button:focus {
   outline: none;
 }
+.slick-dots li button:hover {
+  background-color: #FF8700;
+}
 
 .arrow {
   padding: 0;
-  background: none;
+  background: transparent;
   border: 0;
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 50%;
   z-index: 2;
 }
 .arrow:focus {
   outline: 0;
 }
 .arrow--prev {
-  left: 2rem;
-  transform: rotate(180deg);
+  width: 6rem;
+  height: 5rem;
+  left: 4.8rem;
 }
 .arrow--next {
-  right: 2rem;
+  width: 6rem;
+  height: 5rem;
+  right: 4.8rem;
 }
 
-.arrow-icon {
-  width: 3rem;
-  height: 6rem;
-  fill: #ff0000;
+.arrow {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+.arrow:focus {
+  outline: 0;
+}
+.arrow-prev {
+  width: 6rem;
+  height: 5rem;
+  left: -11.2rem;
+}
+.arrow-next {
+  width: 6rem;
+  height: 5rem;
+  right: -11.2rem;
 }
 
 @keyframes modalCloseAnimation {
@@ -12538,32 +12564,25 @@ a {
 .intro .lazy {
   position: relative;
   margin: 0px auto;
-  width: 160rem;
-  height: 80rem;
+  max-width: 160rem;
 }
 .intro .lazy-img {
-  width: 100%;
+  width: 160rem;
   height: 80rem;
   background: rgba(0, 0, 0, 0.2);
   z-index: 22;
 }
 .intro .lazy-img img {
-  display: block;
-}
-
-.next {
-  width: 5.6rem;
-  height: 4.3rem;
-  position: absolute;
-  top: 30%;
-  z-index: 1;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .promo {
   margin-top: 5.9rem;
   margin-bottom: 4.5rem;
-  height: 77rem;
+  height: 76.9rem;
 }
 .promo h2, .promo .h2 {
   margin-bottom: 7.7rem;
@@ -12574,20 +12593,31 @@ a {
   line-height: 22px;
   color: #894083;
 }
+.promo-slider {
+  max-width: 130rem;
+  margin: 0 auto;
+}
 .promo-slider-card {
-  width: 30.9rem;
   padding-bottom: 1rem;
-  height: auto;
+  width: 100%;
+  height: 46rem;
   background: #FFFFFF;
   border-radius: 22px 0px;
   box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
+.promo-slider-card:hover {
+  margin-bottom: 1rem;
+  height: 56.6rem;
+}
 .promo-slider-card:hover .promo-slider-card-footer {
-  display: block;
+  opacity: 1;
+  z-index: 1;
 }
 .promo-slider-card-header {
   position: relative;
+  height: 22rem;
+  padding: 4.6rem 3.5rem 0 5.3rem;
 }
 .promo-slider-card-header .card-label {
   position: absolute;
@@ -12657,7 +12687,14 @@ a {
   display: inline;
 }
 .promo-slider-card-header .card-img {
-  padding: 4.6rem 3.5rem 0 5.3rem;
+  width: 22rem;
+  height: 20rem;
+}
+.promo-slider-card-header .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .promo-slider-card-content {
   margin-top: 4.7rem;
@@ -12676,12 +12713,15 @@ a {
 .promo-slider-card-content .card-code-instock {
   color: #894083;
 }
+.promo-slider-card-content .card-code-instock.not {
+  color: #C74A2C;
+}
 .promo-slider-card-content .card-code-cod {
   color: #828282;
 }
 .promo-slider-card-content .card-description {
   margin-top: 1.2rem;
-  width: 26.9rem;
+  width: 100%;
   height: 8.8rem;
   font-size: 1.5rem;
   text-align: justify;
@@ -12689,12 +12729,13 @@ a {
 }
 .promo-slider-card-price {
   display: flex;
+  justify-content: space-between;
   margin-top: 1.7rem;
   padding: 0 2rem;
 }
 .promo-slider-card-price .card-price {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 .promo-slider-card-price .card-price-new {
   margin-right: 0.6rem;
@@ -12715,11 +12756,11 @@ a {
   color: #828282;
 }
 .promo-slider-card-price .card-backed {
-  margin-left: 7rem;
+  margin-right: 4rem;
 }
 .promo-slider-card-price .card-backed-cont {
   position: relative;
-  width: 2.9rem;
+  width: 100%;
   height: 3.1rem;
 }
 .promo-slider-card-price .card-backed-cont .backed-img {
@@ -12747,7 +12788,8 @@ a {
 }
 .promo-slider-card-footer {
   margin-top: 0.8rem;
-  display: none;
+  margin-bottom: 1rem;
+  opacity: 0;
   padding: 0 2rem;
 }
 .promo-slider-card-footer .card-count {
@@ -12795,6 +12837,18 @@ a {
 .promo-slider-card-footer .card-buttons-buy:hover, .promo-slider-card-footer .card-buttons-add:hover {
   background-color: #894083;
   color: #fff;
+}
+
+.slick-slide {
+  margin: 0 15px;
+}
+
+.slick-list {
+  margin: 0 -15px;
+}
+
+.draggable {
+  height: 56.6rem;
 }
 
 .footer {
