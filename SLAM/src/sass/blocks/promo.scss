@@ -1,7 +1,10 @@
 .promo {
     margin-top: 5.9rem;
-    margin-bottom: 4.5rem;
-    height: 76.9rem;
+    height: 70rem;
+
+    @media (max-width: 479px) {
+        margin-top: 3rem;
+    }
     
     & h2 {
         margin-bottom: 7.7rem;
@@ -11,6 +14,10 @@
         font-size: 48px;
         line-height: 22px;
         color: #894083;
+
+        @media (max-width: 600px) {
+            margin-bottom: 4rem;
+        }
     }
     &-slider {
         max-width: 130rem;
@@ -19,15 +26,20 @@
         &-card {
             padding-bottom: 1rem;
             width: 100%;
-            height: 46rem;
+            // height: 46rem;
+            height: 56.6rem;
             background: #FFFFFF;
-            border-radius: 22px 0px;
-            box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.08);
+            border-radius: 2.2rem 0rem;
+            box-shadow: 0rem 0.3rem 2.4rem rgba(0, 0, 0, 0.08);
             cursor: pointer;
 
             &:hover {
                 margin-bottom: 1rem;
                 height: 56.6rem;
+
+                & .promo-slider-card-price {
+                    box-shadow: none;
+                }
 
                 & .promo-slider-card-footer {
                     opacity: 1;
@@ -39,6 +51,7 @@
                 position: relative;
                 height: 22rem;
                 padding: 4.6rem 3.5rem 0 5.3rem;
+                overflow: hidden;
 
                 & .card-label {
                     position: absolute;
@@ -61,7 +74,7 @@
                         padding: 0.3rem 1rem 0.1rem;
 
                         background: #FDCA33;
-                        border-radius: 16px 0px;
+                        border-radius: 1.6rem 0rem;
                     }
                     & .new {
                         margin-top: 0.2rem;
@@ -70,7 +83,7 @@
                         padding: 0.3rem 1rem 0.1rem;
 
                         background: #8DC63F;
-                        border-radius: 16px 0px;
+                        border-radius: 1.6rem 0rem;
                     }
                     & .recomend {
                         margin-top: 0.2rem;
@@ -79,7 +92,7 @@
                         padding: 0.3rem 1rem 0.1rem;
 
                         background: #00C2CE;
-                        border-radius: 16px 0px;
+                        border-radius: 1.6rem 0rem;
                     }
                 }
                 & .isliked {
@@ -124,8 +137,10 @@
 
                 }
                 & .card-img {
-                    width: 22rem;
-                    height: 20rem;
+                    margin: 0 auto;
+
+                    width: 100%;
+                    height: 100%;
 
                     & img {
                         width: 100%;
@@ -177,6 +192,7 @@
                 justify-content: space-between;
                 margin-top: 1.7rem;
                 padding: 0 2rem;
+                box-shadow: 0rem 1.2rem 2.4rem rgba(0, 0, 0, 0.08);
 
                 & .card-price {
                     display: flex;
@@ -217,12 +233,17 @@
                             top: 0;
                             left: 0;
                             margin-right: 0;
+
+                            @media (max-width: 784px) {
+                                width: 3rem;
+                                height: 3rem;
+                            }
                         }
 
                         & .backed-count {
                             position: absolute;
                             top: 0;
-                            left: 1rem;
+                            left: 1.2rem;
 
                             font-family: "Acrom";
                             font-weight: 400;
@@ -238,6 +259,11 @@
                             height: 1.5rem;   
                                     
                             background: #894083; 
+
+                            @media (max-width: 784px) {
+                                top: -0.2rem;
+                                font-size: 1rem;
+                            }
                         } 
                     }
                     
@@ -255,24 +281,42 @@
                     justify-content: space-between;
                     align-items: center;
 
-                    width: 268px;
-                    height: 40px;
+                    width: 100%;
+                    height: 4rem;
                     background: #FAFAFA;
-                    border-radius: 50px;
+                    border-radius: 5rem;
+
+                    @media (max-width: 480px) {
+                        height: 3rem;
+                    }
 
                     &-minus,
                     &-plus {
                         background: transparent;
                         border: none;
+
+                        & i {
+                            color: #894083;
+                        }
+
+                        &:hover {
+                            & i {
+                                color: #C74A2C;
+                            }
+                        }
                     }
 
                     & .count {
                         font-family: 'HeliosCRegular';
                         font-weight: 400;
-                        font-size: 18px;
-                        line-height: 26px;
+                        font-size: 1.8rem;
+                        line-height: 2.6rem;
                         text-align: center;
                         letter-spacing: 0.01em;
+
+                        @media (max-width: 400px) {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
 
@@ -305,6 +349,26 @@
                             color: #fff;
                         }
 
+                        @media (max-width: 1292px) {
+                            font-size: 1.3rem;
+                        }
+
+                        @media (max-width: 803px) {
+                            font-size: 1.2rem;
+                        }
+
+                        @media (max-width: 685px) {
+                            font-size: 1.5rem;
+                        }
+
+                        @media (max-width: 518px) {
+                            font-size: 1.2rem;
+                        }
+
+                        @media (max-width: 479px) {
+                            font-size: 1.5rem;
+                        }
+
                     }
                 }
             }
@@ -317,8 +381,5 @@
   
 .slick-list {
     margin: 0 -15px;
-}
-
-.draggable {
-    height: 56.6rem;
+    padding-top: 2rem;
 }

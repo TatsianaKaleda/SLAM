@@ -26,34 +26,40 @@ $(document).ready(function(){
     adaptiveHeight: true,
     pauseOnHover:true,
     pauseOnDotsHover: true,
+    respondTo: 'slider',
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false,
+          }
+        },
       {
-        breakpoint: 600,
+        breakpoint: 687,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
         }
       }
     ],
-    nextArrow: '<button class="arrow  arrow-next"><img src="./public/img/arrow-color-right.png"></button>',
-    prevArrow: '<button class="arrow  arrow-prev"><img src="./public/img/arrow-color-left.png"></button>'
+    nextArrow: '<button class="arrow promo-arrow arrow-next"><img src="./public/img/arrow-color-right.png"></button>',
+    prevArrow: '<button class="arrow promo-arrow arrow-prev"><img src="./public/img/arrow-color-left.png"></button>'
   });
+
 
   var options = {
     lazyLoad: 'ondemand',
@@ -69,18 +75,17 @@ $(document).ready(function(){
   };
 
   // my slick slider as constant object
-  const mySlider = $('.promo-slider').on('init', function(slick) {
+  const mySlider = $('.promo-slider').on('init', function() {
 
     // on init run our multi slide adaptive height function
     multiSlideAdaptiveHeight(this);
 
-  }).on('beforeChange', function(slick, currentSlide, nextSlide) {
+  }).on('beforeChange', function() {
 
     // on beforeChange run our multi slide adaptive height function
     multiSlideAdaptiveHeight(this);
 
   }).slick(options);
-
 
   // our multi slide adaptive height function passing slider object
   function multiSlideAdaptiveHeight(slider) {
@@ -120,40 +125,14 @@ $(document).ready(function(){
 
   }
 
-
   // when window is resized
   $(window).on('resize', function() {
 
     // run our multi slide adaptive height function incase current slider active slides change height responsively
     multiSlideAdaptiveHeight(mySlider);
-
   });
 
-  // var dots = $('.promo-slider li');
-  //   //вешаем обработчик на наши точки
-  //   dots.click(function(){
-  //     var $this = $(this);
-  //     dots.removeClass('before after');
-  //     //отображаем 2 предыдущие точки
-  //     $this
-  //       .prev().addClass('before')
-  //       .prev().addClass('before');
-  //     //отображаем 2 следующие точки
-  //     $this
-  //       .next().addClass('after')
-  //       .next().addClass('after');
 
-    
-  //     //если мы в самом начале - добавляем пару последующих точек
-  //     if(!$this.prev().length) {
-  //       $this.next().next().next()
-  //         .addClass('after').next()
-  //         .addClass('after');
-  //     }
-  //     //на 2й позиции - добавляем одну точку
-  //     if(!$this.prev().prev().length) {
-  //       $this.next().next().next()
-  //         .addClass('after');
-  //     }
-  // });
 })
+
+

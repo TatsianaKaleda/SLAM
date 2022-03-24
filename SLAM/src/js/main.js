@@ -8,6 +8,4 @@ import '../sass/style.scss';
 import './components/slick';
 import './components/cleanButton';
 import './components/liked';
-// import './components/calculator';
 import './components/smoothScroll';
-// import './components/formSubmit';

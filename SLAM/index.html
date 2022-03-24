@@ -13,8 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./dist/css/main.min.css">
 
@@ -28,7 +27,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav mb-lg-0">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 О компании
@@ -51,9 +50,15 @@
                             </li>
                         </ul>
                     </div>
-    
-                    <div class="menu-info navbar-collapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarToggleExternalContent2" aria-controls="navbarToggleExternalContent2"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <div class="menu-info">
+                        <ul class="navbar-nav mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link email" aria-current="page" href="#">
                                     <span class="img">
@@ -96,41 +101,78 @@
                     </div>
                 </div>
             </nav>
-            <ul class="header-list">
-                <li class="header-list-item">
-                    <a class="header-logo" href="#">
-                        <img src="public/img/Logo.png" alt="SLAM">
-                    </a>
-                </li>
-                <li class="header-list-item">
-                    <p class="header-text">Разработка как спорт.</p>
-                    <p class="header-text">Важен только результат.</p>
-                </li>
-                <li class="header-list-item">
-                    <form class="search">
-                        <button class="search" type="submit">
-                            <img src="public/img/search 31.png" alt="search">
-                        </button>
-                        <input id="textInput"  placeholder="Введите текст для поиска" aria-label="Поиск">
-                        <button id="cleanButton" class="cleanButton" type="cleanButton">
-                            <img src="public/img/X.png" alt="clean">
-                        </button>
-                    </form>
-                </li>
-                <li class="header-list-item ">
-                    <a class="header-text liked" href="#">
-                        <img src="public/img/Union.svg" alt="liked">
-                        <span>Избранное</span>
-                    </a>
-                </li>
-                <li class="header-list-item for-backed">
-                    <a class="header-text backed" href="#">
-                        <img class="backed-img" src="public/img/cart.svg" alt="backed">
-                        <div class="backed-count">3</div>
-                    </a>
-                    <p class="backed-price">20 888.50 р.</p>
-                </li>
-            </ul>
+
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent2">
+                <div class="bg-menu shadow-3 p-4">
+                    <ul class="navbar-nav mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" aria-current="page" href="#">О компании</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" aria-current="page" href="#">Потребителям</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Магазины</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                  <!-- <button class="btn btn-block m-0 btn-menu_item" style="font-size: 1.4rem;">
+                    О компании
+                </button>
+                  <button class="btn btn-block m-0 btn-menu_item" style="font-size: 1.4rem;">
+                    Потребителям
+                </button>
+                  <button class="btn btn-block m-0 btn-menu_item" style="font-size: 1.4rem;">
+                    Магазины
+                </button>
+                  <button class="btn btn-block m-0 btn-menu_item" style="font-size: 1.4rem;">
+                    Контакты
+                </button> -->
+                </div>
+            </div>
+
+            <div class="header-list">
+                <ul class="header-list-container logo">
+                    <li class="header-list-item">
+                        <a class="header-logo" href="#">
+                            <img src="public/img/Logo.png" alt="SLAM">
+                        </a>
+                    </li>
+                    <li class="header-list-item">
+                        <p class="header-text text">Разработка как спорт.</p>
+                        <p class="header-text text">Важен только результат.</p>
+                    </li>
+                    <li class="header-list-item">
+                        <form class="search">
+                            <button class="search-btn" type="submit">
+                                <img src="public/img/search 31.png" alt="search">
+                            </button>
+                            <input id="textInput"  placeholder="Введите текст для поиска" aria-label="Поиск">
+                            <button id="cleanButton" class="cleanButton" type="cleanButton">
+                                <img src="public/img/X.png" alt="clean">
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                
+                <ul class="header-list-container">
+                    <li class="header-list-item ">
+                        <a class="header-text liked" href="#">
+                            <img src="public/img/Union.svg" alt="liked">
+                            <span>Избранное</span>
+                        </a>
+                    </li>
+                    <li class="header-list-item for-backed">
+                        <a class="header-text backed" href="#">
+                            <img class="backed-img" src="public/img/cart.svg" alt="backed">
+                            <div class="backed-count">3</div>
+                        </a>
+                        <p class="backed-price">20 888.50 р.</p>
+                    </li>
+                </ul>  
+            </div>
         </div>
     </div>
 
@@ -210,11 +252,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -271,11 +313,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -338,11 +380,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -405,11 +447,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -473,11 +515,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -534,11 +576,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -602,11 +644,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -670,11 +712,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -737,11 +779,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -798,11 +840,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -866,11 +908,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -934,11 +976,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1001,11 +1043,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1062,11 +1104,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1130,11 +1172,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1198,11 +1240,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1265,11 +1307,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1326,11 +1368,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1394,11 +1436,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1462,11 +1504,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1530,11 +1572,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1591,11 +1633,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1659,11 +1701,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1727,11 +1769,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1795,11 +1837,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1856,11 +1898,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1924,11 +1966,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -1992,11 +2034,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2060,11 +2102,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2121,11 +2163,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2189,11 +2231,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2257,11 +2299,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2324,11 +2366,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2385,11 +2427,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2453,11 +2495,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2521,11 +2563,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2589,11 +2631,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2650,11 +2692,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2718,11 +2760,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2786,11 +2828,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2854,11 +2896,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2915,11 +2957,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -2983,11 +3025,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3051,11 +3093,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3119,11 +3161,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3180,11 +3222,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3248,11 +3290,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3316,11 +3358,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3384,11 +3426,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3445,11 +3487,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3513,11 +3555,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3581,11 +3623,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3649,11 +3691,11 @@
                         <div class="promo-slider-card-footer">
                             <form class="card-count">
                                 <button class="card-count-minus" type="minus">
-                                    <img src="public/img/minus-big.svg" alt="minus">
+                                    <i class="fa-solid fa-minus"></i>
                                 </button>
                                 <p class="count"> 200 </p>
                                 <button class="card-count-plus" type="plus">
-                                    <img src="public/img/plus-big.svg" alt="plus">
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                             </form>
                             <div class="card-buttons">
@@ -3673,9 +3715,10 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-bg"></div>
         <div class="container">
-            <div class="footer-nav">
-                <ul class="footer-list nav flex-column">
+            <div class="footer-nav row">
+                <ul class="footer-list nav flex-column col-lg-3 col-6">
                     <li class="item-title">
                         <a class="item-title-link" aria-current="page" href="#">Каталог</a>
                     </li>
@@ -3690,7 +3733,7 @@
                     </li>
                     
                 </ul>
-                <ul class="footer-list nav flex-column">
+                <ul class="footer-list nav flex-column col-lg-3 col-6">
                     <li class="item-title">
                         <a class="item-title-link" aria-current="page" href="#">Информация</a>
                     </li>
@@ -3704,7 +3747,7 @@
                         <a class="item-detail-link" aria-current="page" href="#">О компании</a>
                     </li>
                 </ul>
-                <ul class="footer-list nav flex-column">
+                <ul class="footer-list nav flex-column col-lg-3 col-6">
                     <li class="item-title">
                         <a class="item-title-link" aria-current="page" href="#">Карта сайта</a>
                     </li>
@@ -3718,7 +3761,7 @@
                         <a class="item-detail-link" aria-current="page" href="#">О компании</a>
                     </li>
                 </ul>
-                <ul class="footer-list nav flex-column">
+                <ul class="footer-list nav flex-column col-lg-3 col-6">
                     <li class="item-title">
                         <a class="item-title-link" href="#">Контакты</a>
                     </li>
@@ -3754,10 +3797,6 @@
         </div>
     </footer>
 
-
-    <!-- <a class="link__modal" href="#" data-toggle="modal" data-target="#modal-order">Link Modal</a> -->
-
-
     <!-- Sprites -->
     <svg style="display: none;"  fill="none" >
         <symbol id="close" viewbox="0 0 329.26933 329">
@@ -3766,14 +3805,6 @@
                     d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0" />
             </g>
         </symbol>
-
-        <!-- <symbol id="arrow" viewBox="0 0 56 43">
-            <g>
-                <path
-                    d="M16.999 1.15086L54.999 1.15086L54.999 41.7383L16.999 41.7383V21.9786H40.7724L33.5301 29.7141L34.2372 30.4693L42.6866 21.4446L34.2372 12.4198L33.5301 13.1751L40.7724 20.9105H16.999L16.999 1.15086ZM15.999 20.9105L15.999 0.0827637L55.999 0.0827637L55.999 42.8064L15.999 42.8064L15.999 21.9786L0 21.9786L0 20.9105L15.999 20.9105Z" />
-            </g>
-        </symbol> -->
-        
     </svg>
 
     <!-- Modal Order -->
@@ -3838,151 +3869,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal Leave -->
-    <!-- <div class="modalLeave  modal  fade" id="modal-leave" tabindex="-1" aria-hidden="false">
-        <div class="modal-dialog  modal-dialog-centered">
-            <div class="modal-content  modalLeave__content">
-                <button class="modalLeave__btn-close  close" data-dismiss="modal" aria-label="Close">
-                    <svg>
-                        <use xlink:href="#close"></use>
-                    </svg>
-                </button>
-
-                <div class="modalLeave__inner">
-                    <div class="modalLeave__header">
-                        <h2 class="modalLeave__title">
-                            Оставьте ваш номер телефона
-                        </h2>
-
-                        <h3 class="modalLeave__subtitle">
-                            И наш консультант с Вами свяжется
-                        </h3>
-
-                        <div class="modalLeave__links">
-                            <a class="modalLeave__item" href="tel:+375000000000">
-                                <div class="modalLeave__item-image">
-                                    <img src="../common/img/logo_A1_56.png" alt="">
-                                </div>
-
-                                <div class="modalLeave__item-number">
-                                    +375 (00) 000-00-00
-                                </div>
-                            </a>
-
-                            <a class="modalLeave__item" href="tel:+375000000000">
-                                <div class="modalLeave__item-image">
-                                    <img src="../common/img/logo_mts_64.jpg" alt="">
-                                </div>
-
-                                <div class="modalLeave__item-number">
-                                    +375 (00) 000-00-00
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="modalLeave__body">
-                        <form class="modalLeave__form"> -->
-
-                            <!-- name -->
-                            <!-- <input class="modalLeave__input" type="text" name="name" placeholder="Ваше имя" required> -->
-
-                            <!-- number -->
-                            <!-- <input class="modalLeave__input" type="text" name="tel" placeholder="Номер телефона"
-                                required>
-
-                            <button class="modalLeave__btn" type="submit">
-                                Отправить заявку
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Modal Comment -->
-    <!-- <div class="modalComment  modal  fade" id="modal-comment" tabindex="-1" aria-hidden="false">
-        <div class="modal-dialog  modal-dialog-centered">
-            <div class="modal-content  modalComment__content">
-                <button class="modalComment__btn-close  close" data-dismiss="modal" aria-label="Close">
-                    <svg>
-                        <use xlink:href="#close"></use>
-                    </svg>
-                </button>
-
-                <div class="modalComment__inner">
-                    <div class="modalComment__header">
-                        <h3 class="modalComment__title">
-                            Оставьте ваш комментарий
-                        </h3>
-                    </div> ./modal__header -->
-
-                    <!-- <div class="modalComment__body">
-                        <form class="modalComment__form" method="post" enctype="multipart/form-data">
-
-                            <input class="modalComment__input" type="text" name="name" placeholder="Ваше имя" required>
-
-                            <input class="modalComment__input" type="text" name="tel" placeholder="Номер телефона"
-                                required>
-
-                            <textarea class="modalComment__textarea" name="comment-text" placeholder="Ваш комментарий"
-                                required></textarea>
-
-                            <div class="modalComment__rating">
-                                <input disabled checked
-                                    class="modalComment__rating-input modalComment__rating-input--none" name="rating"
-                                    id="rating3-none" value="0" type="radio">
-
-                                <label class="modalComment__rating-label" for="rating-1">
-                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
-                                </label>
-                                <input class="modalComment__rating-input" name="rating" id="rating-1" value="1"
-                                    type="radio">
-
-                                <label class="modalComment__rating-label" for="rating-2">
-                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
-                                </label>
-                                <input class="modalComment__rating-input" name="rating" id="rating-2" value="2"
-                                    type="radio">
-
-                                <label class="modalComment__rating-label" for="rating-3">
-                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
-                                </label>
-                                <input class="modalComment__rating-input" name="rating" id="rating-3" value="3"
-                                    type="radio">
-
-                                <label class="modalComment__rating-label" for="rating-4">
-                                    <i class="rating__icon modalComment__rating-icon--star fa fa-star"></i>
-                                </label>
-                                <input class="modalComment__rating-input" name="rating" id="rating-4" value="4"
-                                    type="radio">
-
-                                <label class="modalComment__rating-label" for="rating-5">
-                                    <i class="modalComment__rating-icon modalComment__rating-icon--star fa fa-star"></i>
-                                </label>
-                                <input class="modalComment__rating-input" name="rating" id="rating-5" value="5"
-                                    type="radio">
-                            </div>
-
-                            <label class="modalComment__file">
-                                <i class="far fa-file-image"></i>
-                                Фото
-                                <input name="photo" type="file">
-                            </label> -->
-
-                            <!-- button -->
-                            <!-- <button class="modalComment__btn" type="submit">
-                                Отправить отзыв
-                            </button>
-                        </form> ./modal__form -->
-                    <!-- </div> ./modal__body -->
-                <!-- </div> modal__inner -->
-            <!-- </div> -->
-        <!-- </div> ./modal-dialog  -->
-    <!-- </div> ./modal -->
-
 
     <!-- Scripts -->
     <script src="./public/data/data.js"></script>
