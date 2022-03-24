@@ -1,0 +1,132 @@
+.footer {
+    position: relative;
+    padding: 5.4rem 0 3.4rem;
+    text-align: center;
+    background-color: #894083;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    color: #fff;
+
+    @media (max-width: 992px) {
+        padding: 1rem 0 3.4rem;
+    }
+
+    &-bg {
+        position: absolute;
+        top: -112%;
+        right: 2.9rem;
+        z-index: -1;
+
+        width: 41.6rem;
+        height: 41.6rem;
+        background-image: url(../../../public/img/bg-footer.png);
+        background-repeat: no-repeat;
+        background-position: right bottom; 
+
+        @media (max-width: 991px) {
+            background: none;
+        }
+    }
+    
+    &-nav {
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & .footer-list {
+            padding: 0 1rem;
+
+            @media (max-width: 992px) {
+                margin-top: 2rem;
+            }
+
+            & .item-title {
+                margin-bottom: 2rem;
+                text-align: left;
+
+                @media (max-width: 992px) {
+                    text-align: center;
+                }
+
+                &-link {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        color: lightgrey;
+                        transition: width 0.3s ease-out;
+                    }
+                }
+                
+            }
+
+            & .item-detail {
+                margin-bottom: 1.3rem;
+                text-align: left;
+
+                @media (max-width: 992px) {
+                    text-align: center;
+                }
+
+                &-link {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        color: lightgrey;
+                        transition: width 0.3s ease-out;
+                    }
+                }
+
+                & img {
+                    margin-right: 1.5rem;
+                }
+
+                & span {
+                    &:hover{
+                        color: lightgrey;
+                        transition: width 0.3s ease-out;
+                    }
+                }
+            }
+
+            & .for-icon {
+                display: flex;
+
+                @media (max-width: 576px) {
+                    justify-content: center;
+                }
+
+                & .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    background: rgba(255, 255, 255, 0.15);  
+                    
+                    &:hover {
+                        background: rgba(0, 206, 119, 0.15);  
+                    }
+    
+
+                    & .icon-img {
+                        margin-right: 0;
+                    }
+                }
+
+                & .facebook {
+                    margin-right: 0.9rem;
+                }
+            }
+        }
+    }
+}
