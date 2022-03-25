@@ -12331,6 +12331,7 @@ a {
 }
 
 .promo {
+  position: relative;
   margin-top: 5.9rem;
   height: 70rem;
 }
@@ -12338,6 +12339,17 @@ a {
   .promo {
     margin-top: 3rem;
   }
+}
+.promo-bg {
+  position: absolute;
+  bottom: -15%;
+  right: -10.1rem;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../public/img/bg-footer.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 .promo h2, .promo .h2 {
   margin-bottom: 7.7rem;
@@ -12360,7 +12372,7 @@ a {
 .promo-slider-card {
   padding-bottom: 1rem;
   width: 100%;
-  height: 56.6rem;
+  height: 46rem;
   background: #FFFFFF;
   border-radius: 2.2rem 0rem;
   box-shadow: 0rem 0.3rem 2.4rem rgba(0, 0, 0, 0.08);
@@ -12369,9 +12381,6 @@ a {
 .promo-slider-card:hover {
   margin-bottom: 1rem;
   height: 56.6rem;
-}
-.promo-slider-card:hover .promo-slider-card-price {
-  box-shadow: none;
 }
 .promo-slider-card:hover .promo-slider-card-footer {
   opacity: 1;
@@ -12382,6 +12391,12 @@ a {
   height: 22rem;
   padding: 4.6rem 3.5rem 0 5.3rem;
   overflow: hidden;
+}
+@media (max-width: 492px) {
+  .promo-slider-card-header {
+    height: 18rem;
+    padding: 1.6rem 2.5rem 0 3.3rem;
+  }
 }
 .promo-slider-card-header .card-label {
   position: absolute;
@@ -12469,6 +12484,11 @@ a {
   line-height: 2.2rem;
   letter-spacing: 0.02em;
 }
+@media (max-width: 492px) {
+  .promo-slider-card-content {
+    margin-top: 1.7rem;
+  }
+}
 .promo-slider-card-content .card-code {
   display: flex;
   justify-content: space-between;
@@ -12497,7 +12517,11 @@ a {
   justify-content: space-between;
   margin-top: 1.7rem;
   padding: 0 2rem;
-  box-shadow: 0rem 1.2rem 2.4rem rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 492px) {
+  .promo-slider-card-price {
+    margin-top: 1rem;
+  }
 }
 .promo-slider-card-price .card-price {
   display: flex;
@@ -12666,6 +12690,11 @@ a {
   margin: 0 -15px;
   padding-top: 2rem;
 }
+@media (max-width: 479px) {
+  .slick-list {
+    height: 50rem;
+  }
+}
 
 .footer {
   position: relative;
@@ -12679,22 +12708,6 @@ a {
 @media (max-width: 992px) {
   .footer {
     padding: 1rem 0 3.4rem;
-  }
-}
-.footer-bg {
-  position: absolute;
-  top: -112%;
-  right: 2.9rem;
-  z-index: -1;
-  width: 41.6rem;
-  height: 41.6rem;
-  background-image: url(../../public/img/bg-footer.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-@media (max-width: 991px) {
-  .footer-bg {
-    background: none;
   }
 }
 .footer-nav {
