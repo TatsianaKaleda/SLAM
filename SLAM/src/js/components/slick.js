@@ -17,7 +17,7 @@ $(document).ready(function(){
   $('.promo-slider').slick({
     lazyLoad: 'ondemand',
     arrows: true,
-    dots: true,
+    // dots: true,
     infinite: false,
     autoplay: true,
     autoplaySpeed: 5000,
